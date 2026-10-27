@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0d1117">
+  <title>Aarav Garg | ravthings</title>
+  <meta name="description" content="Aarav Garg builds AI models from scratch: language models, experiments and apps.">
+  <link rel="icon" href="logo.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- 1. Navigation -->
+  <nav class="nav" aria-label="Main">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">
+        <img src="logo.png" alt="" width="28" height="28">
+        <span>ravthings</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <g class="icon-menu"><path d="M4 7h16M4 12h16M4 17h16"/></g>
+          <g class="icon-close"><path d="M6 6l12 12M18 6L6 18"/></g>
+        </svg>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#models">Models</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- 2. Hero -->
+    <section class="hero" id="top">
+      <div class="container">
+        <h1>Hi, I’m Aarav Garg</h1>
+        <p class="hero-sub">I build AI models from scratch</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#models">See my models</a>
+          <a class="btn btn-outline" href="https://github.com/ravthings" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. About -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2>About</h2>
+        <div class="prose">
+          <p>I’m Aarav, and I like to understand how things work by building them myself. I started out making Swift apps, then got pulled into machine learning and haven’t looked back.</p>
+          <p>These days I train small language models from scratch. I began by counting character pairs, built a neural network by hand, then wrote a GPT with self-attention. Keeping the models small means I can see every moving part, and I’d rather fully understand a tiny model than call a big one through an API.</p>
+          <p>I work mostly in Python and Jupyter, with a few Swift apps along the way. Next, I want to make my models bigger and better.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Models -->
+    <section class="section" id="models">
+      <div class="container">
+        <h2>Models</h2>
+        <!--
+          Each card is wired up by its data-model id (see script.js).
+          Fill in the loss values below (replace [x]).
+        -->
+        <div class="grid grid-models">
+          <article class="card model-card" data-model="kick-off">
+            <h3>Kick-Off</h3>
+            <p class="card-desc">A word-level language model trained on Wikipedia pages of football clubs.</p>
+            <dl class="stats">
+              <div><dt>train loss</dt><dd>[x]</dd></div>
+              <div><dt>val loss</dt><dd>[x]</dd></div>
+            </dl>
+            <div class="sample" data-output hidden aria-live="polite">
+              <p class="sample-text"></p>
+            </div>
+            <div class="card-actions">
+              <button type="button" class="btn btn-outline btn-small" data-generate>Generate sample</button>
+              <a class="link" href="https://github.com/ravthings/Kick-Off" target="_blank" rel="noopener noreferrer">View repo</a>
+            </div>
+          </article>
+
+          <article class="card model-card" data-model="shake-gpt">
+            <h3>Shake-GPT</h3>
+            <p class="card-desc">A character-level GPT with self-attention that writes Shakespeare-style text.</p>
+            <dl class="stats">
+              <div><dt>train loss</dt><dd>[x]</dd></div>
+              <div><dt>val loss</dt><dd>[x]</dd></div>
+            </dl>
+            <div class="sample" data-output hidden aria-live="polite">
+              <p class="sample-text"></p>
+            </div>
+            <div class="card-actions">
+              <button type="button" class="btn btn-outline btn-small" data-generate>Generate sample</button>
+              <a class="link" href="https://github.com/ravthings/Shake-GPT" target="_blank" rel="noopener noreferrer">View repo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="grid grid-projects">
+          <article class="card project-card">
+            <h3>UPDATED_MakeSumMore</h3>
+            <p class="card-desc">A name generator built as a bigram model and then a neural network (MLP).</p>
+            <div class="card-meta">
+              <span class="tag">Jupyter</span>
+              <a class="link" href="https://github.com/ravthings/UPDATED_MakeSumMore" target="_blank" rel="noopener noreferrer">View repo</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>Small_One</h3>
+            <p class="card-desc">[add a one-line description]</p>
+            <div class="card-meta">
+              <span class="tag">Python</span>
+              <a class="link" href="https://github.com/ravthings/Small_One" target="_blank" rel="noopener noreferrer">View repo</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>My-first-model</h3>
+            <p class="card-desc">[add a one-line description]</p>
+            <div class="card-meta">
+              <span class="tag">Python</span>
+              <a class="link" href="https://github.com/ravthings/My-first-model" target="_blank" rel="noopener noreferrer">View repo</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>liltext</h3>
+            <p class="card-desc">A macOS chat app for talking to local language models, in the style of Ollama.</p>
+            <div class="card-meta">
+              <span class="tag">Swift</span>
+              <a class="link" href="https://github.com/ravthings/liltext" target="_blank" rel="noopener noreferrer">View repo</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>Hiya</h3>
+            <p class="card-desc">A SwiftUI app that gives a welcome response using Apple Intelligence.</p>
+            <div class="card-meta">
+              <span class="tag">Swift</span>
+              <a class="link" href="https://github.com/ravthings/Hiya" target="_blank" rel="noopener noreferrer">View repo</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>GroceryList</h3>
+            <p class="card-desc">A simple grocery list app.</p>
+            <div class="card-meta">
+              <span class="tag">Swift</span>
+              <a class="link" href="https://github.com/ravthings/GroceryList" target="_blank" rel="noopener noreferrer">View repo</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>WishList</h3>
+            <p class="card-desc">A simple wish list app.</p>
+            <div class="card-meta">
+              <span class="tag">Swift</span>
+              <a class="link" href="https://github.com/ravthings/WishList" target="_blank" rel="noopener noreferrer">View repo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Timeline (newest first) -->
+    <section class="section" id="timeline">
+      <div class="container">
+        <h2>Timeline</h2>
+        <ol class="timeline">
+          <li>
+            <span class="date">Oct 2026</span>
+            <p>Kick-Off, my first word-level language model</p>
+          </li>
+          <li>
+            <span class="date">Oct 2026</span>
+            <p>Shake-GPT, built a GPT from scratch</p>
+          </li>
+          <li>
+            <span class="date">Oct 2026</span>
+            <p>MakeSumMore, my first language models (bigram and MLP)</p>
+          </li>
+          <li>
+            <span class="date">Sep 2026</span>
+            <p>My first model and liltext</p>
+          </li>
+          <li>
+            <span class="date">Jun 2026</span>
+            <p>Started making Swift apps (Hiya, WishList, GroceryList) and my first website</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 7. Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2>Want to chat about what I’m building?</h2>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:aaravgarg1011@gmail.com">aaravgarg1011@gmail.com</a>
+          <a class="btn btn-outline" href="https://github.com/ravthings" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>Built by ravthings</span>
+      <span id="year">2026</span>
+    </div>
+  </footer>
+</body>
+</html>
