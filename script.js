@@ -4,7 +4,8 @@
    1. Model samples
    --------------------------------------------------------------------------
    The page only ever calls generateSample(modelId), which must return a
-   Promise that resolves to a string. The HTML never needs to change.
+   Promise that resolves to a string. The HTML never needs to change. Both the
+   "Generate sample" buttons and the hero terminal use this one function.
 
    To use a real live model later, replace the body of generateSample() with
    a request to your own server, for example:
@@ -108,7 +109,79 @@ document.querySelectorAll("[data-model]").forEach((card) => {
 });
 
 /* ==========================================================================
-   3. Mobile menu
+   3. Hero terminal
+   --------------------------------------------------------------------------
+   Types "python main.py", then types a Kick-Off sample, holds, and repeats
+   with a different sample. It pauses while it is off screen or the tab is
+   hidden. With reduced motion it shows one static sample instead.
+   ========================================================================== */
+
+async function runTerminal(root) {
+  const body = root.querySelector(".terminal-body");
+  const commandElement = root.querySelector("[data-term-cmd]");
+  const outputElement = root.querySelector("[data-term-out]");
+
+  const COMMAND = "python main.py";
+  const MODEL_ID = "kick-off";
+  const HOLD_MS = 3200;
+
+  let onScreen = true;
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver((entries) => {
+      onScreen = entries[0].isIntersecting;
+    }).observe(root);
+  }
+  const canRun = () => onScreen && !document.hidden;
+
+  async function nextSample() {
+    try {
+      return await generateSample(MODEL_ID);
+    } catch (error) {
+      console.error(error);
+      return "";
+    }
+  }
+
+  async function type(element, text, delay) {
+    element.classList.add("is-typing");
+    const characters = Array.from(text);
+    for (let i = 1; i <= characters.length; i++) {
+      while (!canRun()) await wait(250);
+      element.textContent = characters.slice(0, i).join("");
+      body.scrollTop = body.scrollHeight;
+      await wait(delay);
+    }
+  }
+
+  if (reducedMotion.matches) {
+    commandElement.textContent = COMMAND;
+    outputElement.textContent = await nextSample();
+    return;
+  }
+
+  while (true) {
+    commandElement.textContent = "";
+    outputElement.textContent = "";
+    outputElement.classList.remove("is-typing");
+    body.scrollTop = 0;
+
+    await type(commandElement, COMMAND, 60);
+    commandElement.classList.remove("is-typing");
+    await wait(450);
+
+    const sample = await nextSample();
+    const length = Array.from(sample).length || 1;
+    await type(outputElement, sample, Math.min(30, Math.max(8, 2800 / length)));
+
+    await wait(HOLD_MS);
+  }
+}
+
+const terminal = document.querySelector("[data-terminal]");
+if (terminal) runTerminal(terminal);
+
+/* ==========================================================================
+   4. Navigation: mobile menu and scrolled state
    ========================================================================== */
 
 const nav = document.querySelector(".nav");
@@ -132,8 +205,42 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") setMenu(false);
 });
 
+// Transparent at the top of the page, blurred dark background once scrolled.
+function updateNavState() {
+  nav.classList.toggle("is-scrolled", window.scrollY > 8);
+}
+
+updateNavState();
+window.addEventListener("scroll", updateNavState, { passive: true });
+
 /* ==========================================================================
-   4. Footer year
+   5. Fade-in and slide-up as sections scroll into view
+   --------------------------------------------------------------------------
+   The CSS only hides .reveal elements when motion is allowed, so with
+   prefers-reduced-motion everything is simply visible.
+   ========================================================================== */
+
+const revealElements = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { rootMargin: "0px 0px -10% 0px", threshold: 0 }
+  );
+  revealElements.forEach((element) => revealObserver.observe(element));
+} else {
+  revealElements.forEach((element) => element.classList.add("is-visible"));
+}
+
+/* ==========================================================================
+   6. Footer year
    ========================================================================== */
 
 document.getElementById("year").textContent = new Date().getFullYear();
