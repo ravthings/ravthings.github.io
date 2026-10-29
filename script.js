@@ -25,7 +25,7 @@
 // Keys match the data-model attribute on each card in index.html.
 const SAMPLES = {
   "kick-off": [
-    "[paste output 1]",
+    "Liverpool reached the Year. In 2016, the record for a new ground which has won the era. On 19 and five leagues. Real Madrid and broke leadership Liverpool won as the 2015 UEFA Cup. Real Madrid lost 2–1. During that ultimately finished the 2008–09 season, where the professional football writer Josep",
     "[paste output 2]",
     "[paste output 3]",
   ],
