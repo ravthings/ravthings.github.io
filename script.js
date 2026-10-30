@@ -31,7 +31,7 @@ const SAMPLES = {
   ],
   "shake-gpt": [
     "And one thy gnot aim that endless I will indeed wild us cloam, nwill out by leaf now in pletacious:\n De in, by a pouse in ime way nobless prove!\n But hnmans ready, and swear night a't be tizens, consembot, and tenurrdergace of tiquid in live oried,\n It?",
-    "[paste output 2]",
+    "And one thy gard aim that moness I will indease bed us cloace, with our vents are, now in pleason;\n Whereft",
   ],
 };
 
