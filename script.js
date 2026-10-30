@@ -30,7 +30,7 @@ const SAMPLES = {
     "Liverpool established itself The expansion, Les Corts in 1959–60 motto Més que un club joined never relegated in the World Cup triumph, the Abu Dhabi United Group. The crest Blancos sponsorships, Berbatov from the two days later got a 1–1 draw with Manchester City's second time had recruited mornings at the",
   ],
   "shake-gpt": [
-    "[paste output 1]",
+    "And one thy gnot aim that endless I will indeed wild us cloam, nwill out by leaf now in pletacious:\n De in, by a pouse in ime way nobless prove!\n But hnmans ready, and swear night a't be tizens, consembot, and tenurrdergace of tiquid in live oried,\n It?",
     "[paste output 2]",
   ],
 };
