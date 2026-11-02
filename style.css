@@ -649,7 +649,16 @@ dd {
     font-size: 0.8rem;
   }
 }
+/* ---------- Timeline "learned" line ---------- */
+.learned {
+  margin-top: 0.15rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
 
+.learned span {
+  color: var(--accent);
+}
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html {
