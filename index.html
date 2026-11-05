@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="68itUXZqKqWTJwsmlj_jidDJWCcd3xg7_e0BokGcAS4" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
@@ -17,8 +16,8 @@
   <!-- Lets the CSS hide sections for the scroll animation only when JavaScript is running -->
   <script>document.documentElement.classList.add("js");</script>
 
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css?v=3">
+  <script src="script.js?v=3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -53,7 +52,7 @@
     <section class="hero" id="top">
       <div class="container hero-grid reveal">
         <div class="hero-copy">
-          <h1>Hi, I’m Aarav</h1>
+          <h1>Hi, I’m Aarav Garg</h1>
           <p class="hero-sub">I build AI models from scratch</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#models">See my models</a>
@@ -99,12 +98,28 @@
           Fill in the loss values below (replace [x]).
         -->
         <div class="grid grid-models">
+          <article class="card model-card" data-model="bedtime">
+            <h3>Bedtime</h3>
+            <p class="card-desc">A small transformer, built from scratch in MLX, that writes short children’s stories.</p>
+            <dl class="stats">
+              <div><dt>train loss</dt><dd>[x]</dd></div>
+              <div><dt>val loss</dt><dd>[x]</dd></div>
+            </dl>
+            <div class="sample" data-output hidden aria-live="polite">
+              <p class="sample-text"></p>
+            </div>
+            <div class="card-actions">
+              <button type="button" class="btn btn-outline btn-small" data-generate>Generate sample</button>
+              <a class="link" href="https://github.com/ravthings/Bedtime" target="_blank" rel="noopener noreferrer">View repo</a>
+            </div>
+          </article>
+
           <article class="card model-card" data-model="kick-off">
             <h3>Kick-Off</h3>
             <p class="card-desc">A word-level language model trained on Wikipedia pages of football clubs.</p>
             <dl class="stats">
-              <div><dt>train loss</dt><dd>2.5</dd></div>
-              <div><dt>val loss</dt><dd>9.3 (overfitting)</dd></div>
+              <div><dt>train loss</dt><dd>[x]</dd></div>
+              <div><dt>val loss</dt><dd>[x]</dd></div>
             </dl>
             <div class="sample" data-output hidden aria-live="polite">
               <p class="sample-text"></p>
@@ -119,8 +134,8 @@
             <h3>Shake-GPT</h3>
             <p class="card-desc">A character-level GPT with self-attention that writes Shakespeare-style text.</p>
             <dl class="stats">
-              <div><dt>train loss</dt><dd>1.59</dd></div>
-              <div><dt>val loss</dt><dd>2.33</dd></div>
+              <div><dt>train loss</dt><dd>[x]</dd></div>
+              <div><dt>val loss</dt><dd>[x]</dd></div>
             </dl>
             <div class="sample" data-output hidden aria-live="polite">
               <p class="sample-text"></p>
@@ -151,7 +166,7 @@
 
           <article class="card project-card">
             <h3>Small_One</h3>
-            <p class="card-desc">A project that was never finished</p>
+            <p class="card-desc">[add a one-line description]</p>
             <div class="card-meta">
               <span class="tag">Python</span>
               <a class="link" href="https://github.com/ravthings/Small_One" target="_blank" rel="noopener noreferrer">View repo</a>
@@ -160,7 +175,7 @@
 
           <article class="card project-card">
             <h3>My-first-model</h3>
-            <p class="card-desc">Outputs the capital city of the country that you input</p>
+            <p class="card-desc">[add a one-line description]</p>
             <div class="card-meta">
               <span class="tag">Python</span>
               <a class="link" href="https://github.com/ravthings/My-first-model" target="_blank" rel="noopener noreferrer">View repo</a>
@@ -202,9 +217,10 @@
               <a class="link" href="https://github.com/ravthings/WishList" target="_blank" rel="noopener noreferrer">View repo</a>
             </div>
           </article>
+
           <article class="card project-card">
             <h3>Howzat</h3>
-            <p class="card-desc">Similar to Kick-Off, but with Cricket instead</p>
+            <p class="card-desc">[one-line description]</p>
             <div class="card-meta">
               <span class="tag">Python</span>
               <a class="link" href="https://github.com/ravthings/Howzat" target="_blank" rel="noopener noreferrer">View repo</a>
@@ -222,8 +238,8 @@
         <ol class="timeline">
           <li>
             <span class="date">Nov 2026</span>
-            <p>Howzat, a model similar to Kick-Off, but in MLX</p>
-            <p class="learned"><span>Learned:</span> MLX version of Kick-off and on Cricket Data</p>
+            <p>Howzat, [what Howzat is]</p>
+            <p class="learned"><span>Learned:</span> [3 words]</p>
           </li>
           <li>
             <span class="date">Oct 2026</span>

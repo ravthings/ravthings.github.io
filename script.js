@@ -24,14 +24,18 @@
 
 // Keys match the data-model attribute on each card in index.html.
 const SAMPLES = {
+  "bedtime": [
+    "Once upon a time, there was a basket. The terrible bird had to pup in the box and went found at the lion... The sun smiled and waved to out hara laugh.",
+    "[paste output 2]",
+  ],
   "kick-off": [
     "Liverpool reached the Year. In 2016, the record for a new ground which has won the era. On 19 and five leagues. Real Madrid and broke leadership Liverpool won as the 2015 UEFA Cup. Real Madrid lost 2–1. During that ultimately finished the 2008–09 season, where the professional football writer Josep",
-    "Liverpool won by Real Madrid their league goals by Arsenal scored the continental treble, the world record nine years, financial security of the sixth round of Messi, now being the dictatorship and was overshadowed sports journalist Paco Aguilar that era. On November 1999, Vicente del Rey final against Santander by the",
-    "Liverpool established itself The expansion, Les Corts in 1959–60 motto Més que un club joined never relegated in the World Cup triumph, the Abu Dhabi United Group. The crest Blancos sponsorships, Berbatov from the two days later got a 1–1 draw with Manchester City's second time had recruited mornings at the",
+    "[paste output 2]",
+    "[paste output 3]",
   ],
   "shake-gpt": [
-    "And one thy gnot aim that endless I will indeed wild us cloam, nwill out by leaf now in pletacious:\n De in, by a pouse in ime way nobless prove!\n But hnmans ready, and swear night a't be tizens, consembot, and tenurrdergace of tiquid in live oried,\n It?",
-    "And one thy gard aim that moness I will indease bed us cloace, with our vents are, now in pleason;\n Whereft\n Heir for me\n Blosdeech I am lifnams to appardons infollow in't.\n Which a guch men, then.",
+    "[paste output 1]",
+    "[paste output 2]",
   ],
 };
 
