@@ -25,8 +25,16 @@
 // Keys match the data-model attribute on each card in index.html.
 const SAMPLES = {
   "bedtime": [
-    "Once upon a time, there was a basket. The terrible bird had to pup in the box and went found at the lion... The sun smiled and waved to out hara laugh.",
-    "[paste output 2]",
+    `Once upon a time, there was a little girl. Instop, every day, Amy's motor would go to the park with his friends. One day, they asked again if they could go outside and won the swing and planet. As they found a passport tree. The little girl was very curious for her help and she could make a treature.
+
+The little girl was sad to say herself. She had told one about the mapsage, so she was a bit faller. She decided to help him leaves and stay in the pool.
+
+Now, her friends rosniped in across time. They clapped their hands and clapped and knew they were all down and beautiful. Even though she was sure for the next day.`,
+    `Once upon a time, there was a little boy named Sarah. One day, Sarah could do something about the maceposs meowing him on the field. Everyday he was gone wanted to keep warm happy to have just a friend, who loved memories.
+Sarah loved to play all than his friends. They all played together and writes and such a lot.`,
+    `One day Slowy's mother's mom saw the sun wheels. Then the boy went onto the park, white and hunted the elephant falls on it. Tommy got out of his name was a little boy who was reliable. He cried him to accidentally every morning, forthuring the bald just in be brown!
+
+Lily said to Tom, but snacks could not believe it back their limakes of fur. She said she could use the magazes. She broke down's mouth and says, "No, mommy!" Tommy licks their balloonsations. Lila is happy. She thinks they have a lot of fun. She wases another surprises, but her`,
   ],
   "kick-off": [
     "Liverpool reached the Year. In 2016, the record for a new ground which has won the era. On 19 and five leagues. Real Madrid and broke leadership Liverpool won as the 2015 UEFA Cup. Real Madrid lost 2–1. During that ultimately finished the 2008–09 season, where the professional football writer Josep",
