@@ -661,6 +661,15 @@ dd {
   }
 }
 
+.card-actions {
+  flex-wrap: wrap;
+}
+
+.card-links {
+  display: flex;
+  gap: 1rem;
+}
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html {
