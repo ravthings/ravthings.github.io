@@ -134,7 +134,7 @@ async function runTerminal(root) {
   const outputElement = root.querySelector("[data-term-out]");
 
   const COMMAND = "python main.py";
-  const MODEL_ID = "kick-off";
+  const MODEL_ID = "bedtime";
   const HOLD_MS = 3200;
 
   let onScreen = true;
